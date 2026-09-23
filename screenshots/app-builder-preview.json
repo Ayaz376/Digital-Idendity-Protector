@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "CyberSpide Identity Protection",
+      "hasCanvas": false,
+      "bodyTextLen": 1471,
+      "bodyTextHash": "9ba0e6f59cd6314858f30034a53969caa047dc2ca666c3b37694a85e7e66824d",
+      "bodyTextPrefix": "CyberSpide Digital Identity Protection Overview Cases 1 What's w",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "CyberSpide Identity Protection",
+      "hasCanvas": false,
+      "bodyTextLen": 1249,
+      "bodyTextHash": "91b60d5a2c2a39cbf108d0354a2349ecdb81bf8c5825cc394e56096e0c6df3c5",
+      "bodyTextPrefix": "CyberSpide CLIENT VIEW Aarav Shah 1 to do DIGITAL IDENTITY PROTE",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

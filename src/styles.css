@@ -1,0 +1,110 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-bg: #040916;
+  --color-bg-deep: #020611;
+  --color-surface: #081424;
+  --color-surface-2: #0c1e34;
+  --color-fg: #f2f7ff;
+  --color-muted: #9cb7d5;
+  --color-brand: #2ec8ff;
+  --color-brand-strong: #00f0c4;
+  --color-warning: #ff8870;
+  --color-success: #6df0c2;
+  --color-line: rgb(115 184 255 / 0.18);
+  --color-line-strong: rgb(99 214 255 / 0.34);
+  --font-sans: "Outfit", "Segoe UI Variable Text", "Segoe UI", sans-serif;
+  --font-display: "Outfit", "Segoe UI Variable Display", "Segoe UI", sans-serif;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --shadow-panel: 0 24px 70px rgb(0 0 0 / 0.38);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--color-bg-deep);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.cs-shell {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 0% 0%, rgb(0 240 196 / 0.08), transparent 28%),
+    radial-gradient(circle at 92% 8%, rgb(46 200 255 / 0.12), transparent 30%),
+    linear-gradient(180deg, var(--color-bg-deep) 0%, var(--color-bg) 48%, #07101d 100%);
+}
+
+.cs-grid-mask {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgb(71 103 143 / 0.07) 1px, transparent 0),
+    linear-gradient(90deg, rgb(71 103 143 / 0.07) 1px, transparent 0);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(circle at center, black 40%, transparent 82%);
+  opacity: 0.34;
+}
+
+.cs-panel {
+  background: linear-gradient(180deg, rgb(9 21 37 / 0.94), rgb(7 15 27 / 0.82));
+  border: 1px solid var(--color-line);
+  box-shadow: var(--shadow-panel);
+}
+
+.cs-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-brand);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.cs-eyebrow::before {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--color-brand), transparent);
+}
